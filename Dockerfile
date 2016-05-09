@@ -2,7 +2,8 @@ FROM shoifele/bone-centos
 
 MAINTAINER Christoph Wiechert <wio@psitrax.de>
 
-ENV REFRESHED_AT="2016-04-20"
+ENV REFRESHED_AT="2016-04-20" \
+    BAREOS_SD_CONF_FILE=bareos-sd.conf
 
 RUN curl -Ls http://download.bareos.org/bareos/release/latest/CentOS_7/bareos.repo \
     > /etc/yum.repos.d/bareos.repo \

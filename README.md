@@ -3,6 +3,7 @@
 * Port: `9103`
 * Config: `/etc/bareos/bareos-sd.conf`
   A template gets copied if the file does not exists.
+* Different Config file: `BAREOS_SD_CONF_FILE=custom-sd.conf`
 
 ```
 docker run \
