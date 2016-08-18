@@ -1,23 +1,19 @@
-# Bareos Storage Daemon
+# Bareos File Daemon
 
-* Port: `9103`
-* Config: `/etc/bareos/bareos-sd.conf`
+* Port: `9102`
+* Config: `/etc/bareos/bareos-fd.conf`
   A template gets copied if the file does not exists.
-* Different Config file: `BAREOS_SD_CONF_FILE=custom-sd.conf`
 
 ```
+
 docker run \
-  --rm \
-  --name bareos-sd \
-  -v /opt/bareos/conf:/etc/bareos \
-  -v /opt/backup-storage:/storage \
-  --hostname bareos-sd \
-  --link bareos-dir:bareos-dir \
-  shoifele/bareos-sd
+ --rm \
+ --name bareos-fd \ 
+ -p 9102:9102 \ 
+ -v /:/mnt:ro \
+ -v  /data/etc/bareos-fd.conf:/etc/bareos/bareos-fd.conf \
+ --hostname bareos-fd \
+ djeshkov/bareos-fd
+
 ```
 
-### CIFS/SSHFS Mount
-For cifs or sshfs mounts you need some more rights:
-```
-docker run ... --cap-add SYS_ADMIN --cap-add DAC_READ_SEARCH ...
-```
