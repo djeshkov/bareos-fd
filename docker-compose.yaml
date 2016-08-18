@@ -1,0 +1,9 @@
+bareos-fd:
+  container_name: bareos-fd
+  image: djeshkov/bareos-fd
+  ports:
+    - "9102:9102"
+
+  volumes:
+    - "/data/etc/bareos-fd.conf:/etc/bareos/bareos-fd.conf"
+    - /:/mnt:ro
