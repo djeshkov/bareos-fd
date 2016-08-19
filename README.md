@@ -1,8 +1,7 @@
 # Bareos File Daemon
 
 * Port: `9102`
-* Config: `/etc/bareos/bareos-fd.conf`
-  A template gets copied if the file does not exists.
+* Config: `/data/etc/bareos-fd.con`
 
 ```
 
@@ -17,3 +16,12 @@ docker run \
 
 ```
 
+
+@ Docker composer
+
+```
+
+curl -L https://raw.githubusercontent.com/djeshkov/bareos-fd/master/docker-compose.yaml > /tmp/docker-compose.yaml
+docker-compose up
+
+```
