@@ -11,7 +11,7 @@ docker run \
  --name bareos-fd \ 
  -p 9102:9102 \ 
  -v /:/mnt:ro \
- -v  /data/etc/bareos-fd.conf:/etc/bareos/bareos-fd.conf \
+ -v  /data/etc:/etc/bareos \
  --hostname bareos-fd \
  djeshkov/bareos-fd
 
