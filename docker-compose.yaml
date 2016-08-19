@@ -5,5 +5,5 @@ bareos-fd:
     - "9102:9102"
 
   volumes:
-    - "/data/etc/bareos-fd.conf:/etc/bareos/bareos-fd.conf"
+    - "/data/etc:/etc/bareos"
     - /:/mnt:ro
