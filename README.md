@@ -7,12 +7,12 @@
 ```
 
 docker run \
- --rm \
- --name bareos-fd \ 
- -p 9102:9102 \ 
- -v /:/mnt:ro \
- -v  /data/etc:/etc/bareos \
- --hostname bareos-fd \
+  --rm \
+  --name bareos-fd \
+  -v /:/mnt \
+  -p 9102:9102 \
+  -v /data/etc:/etc/bareos \
+  --hostname bareos-fd \
  djeshkov/bareos-fd
 
 ```
