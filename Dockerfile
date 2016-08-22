@@ -9,6 +9,7 @@ RUN curl -Ls http://download.bareos.org/bareos/release/latest/CentOS_7/bareos.re
     > /etc/yum.repos.d/bareos.repo \
   && yum -y install \
     bareos-client \
+    postgresql \
     sshfs \
     cifs-utils \
   && yum clean all
