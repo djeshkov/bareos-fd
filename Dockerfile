@@ -7,9 +7,10 @@ ENV REFRESHED_AT="2016-08-18" \
 
 RUN curl -Ls http://download.bareos.org/bareos/release/latest/CentOS_7/bareos.repo \
     > /etc/yum.repos.d/bareos.repo \
+  && yum -y localinstall http://yum.postgresql.org/9.4/redhat/rhel-6-x86_64/pgdg-centos94-9.4-1.noarch.rpm  \
   && yum -y install \
     bareos-client \
-    postgresql \
+    postgresql94 \
     sshfs \
     cifs-utils \
   && yum clean all
